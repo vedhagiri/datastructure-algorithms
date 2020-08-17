@@ -25,3 +25,30 @@ function exponentialRuntime(arr){
 
 exponentialRuntime(['A', 'B', 'C']);
 exponentialRuntime(['A', 'B', 'C', 'D', 'E', 'F', 'G']);
+
+
+// logarthmic Runtime
+// Big O Notation : O(log n)
+const binarySearch = (arr, key) => {
+    let low = 0, high = arr.length -1, mid, element;
+
+    while (low <= high){
+        mid = Math.floor((low + high) / 2, 10);
+        console.log(mid);
+        element = arr[mid];
+
+        if(element < key ){
+            low = mid + 1;
+        } else if (element > key){
+            high = mid -1;
+        }else {
+            return mid;
+        }
+
+    }
+
+    return -1;
+}
+const st = binarySearch([1,2,3,5,6,7,8,9], 4);
+
+console.log(st);
