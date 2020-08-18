@@ -6,7 +6,7 @@ function reverseWords(str){
     words.forEach((word) => {
         result.push(word.split('').reverse().join(''));
     });
-    return result.join(' ');
+    return result.reverse().join(' ');
 }
 
 console.log(reverseWords('abc xyz'));
